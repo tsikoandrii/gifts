@@ -1,4 +1,4 @@
-# Сборка для верстки
+# Front End проекта Gift
 ![alt text](https://badgen.net/github/release/webzlodimir/gulp-template "Releases")
 
 ## Подготовка к работе

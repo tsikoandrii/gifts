@@ -348,6 +348,11 @@ input {
     align-items: center; }
   .profile .profile-avatar {
     margin-bottom: 30px; }
+  .profile .save-changes {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-top: 40px;
+    z-index: 1 !important; }
   .profile .profile-name {
     width: 100%;
     text-align: center;
@@ -443,6 +448,13 @@ input {
   padding-bottom: 95px; }
   .add-contest-block-title {
     margin-bottom: 20px; }
+  .add-contest-block .create-contest-button {
+    z-index: 1; }
+    .add-contest-block .create-contest-button:before {
+      z-index: -1; }
+    .add-contest-block .create-contest-button.disabled {
+      background: rgba(0, 82, 255, 0.5);
+      color: #8196C6; }
   .add-contest-block input.card-input {
     -webkit-appearance: none;
     margin-bottom: 30px;

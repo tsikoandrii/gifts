@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var registerModalButton = document.querySelector('#registerModalButton');
 
   if (registerModalButton) {
-    openHandler(registerModalButton, registerModal);
+    openHandler(registerModalButton, registerModal, function () {
+      console.log('skksks');
+    });
   } // Add New Card
 
 
@@ -56,7 +58,24 @@ document.addEventListener('DOMContentLoaded', function () {
         addNewCard.classList.add('active');
       }
     });
-  } // DatePicker
+  } // Update Date Input Function
+
+
+  var dateInput = document.querySelector('#dateInput');
+
+  var updateDateInput = function updateDateInput(type) {
+    if (dateInput.value) {
+      dateInput.value = "".concat(String(currentDate.day).padStart(2, '0'), "-").concat(String(currentDate.month).padStart(2, '0'), " ").concat(String(currentDate.hours).padStart(2, '0'), ":").concat(String(currentDate.minutes).padStart(2, '0'));
+    } else {
+      if (type === 'date') {
+        dateInput.value = "".concat(String(currentDate.day).padStart(2, '0'), "-").concat(String(currentDate.month).padStart(2, '0'));
+      }
+
+      if (type === 'time') {
+        dateInput.value = "".concat(String(currentDate.hours).padStart(2, '0'), ":").concat(String(currentDate.minutes).padStart(2, '0'));
+      }
+    }
+  }; // DatePicker
 
 
   if (datePickerButton) {
@@ -132,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (e.target.dataset.type === 'submit') {
         datePickerButton.innerHTML = "".concat(currentDate.day, " ").concat(namesOfMonths[currentDate.month]);
+        updateDateInput('date');
         closeHandler(datePicker);
       }
     });
@@ -157,8 +177,108 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (e.target.dataset.type === 'submit') {
         timePickerButton.innerHTML = "".concat(String(currentDate.hours).padStart(2, '0'), ":").concat(String(currentDate.minutes).padStart(2, '0'));
+        updateDateInput('time');
         closeHandler(timePicker);
       }
     });
+  } // Timer
+
+
+  var date_timer = document.querySelector('#timer');
+
+  function getTimeRemaining(time) {
+    var days,
+        hours,
+        minutes,
+        seconds = 0;
+
+    if (time.days.name) {
+      days = time.days.value;
+      hours = time.hours.value;
+      minutes = time.minutes.value;
+      seconds = time.seconds.value;
+    } else {
+      days = time.days;
+      hours = time.hours;
+      minutes = time.minutes;
+      seconds = time.seconds;
+    }
+
+    if (!days && !hours && !minutes && !seconds) {
+      return {
+        'days': 0,
+        'hours': 0,
+        'minutes': 0,
+        'seconds': 0
+      };
+    }
+
+    seconds--;
+
+    if (seconds < 0) {
+      seconds = 59;
+      minutes--;
+    }
+
+    if (minutes < 0) {
+      minutes = 59;
+      hours--;
+    }
+
+    if (hours < 0) {
+      hours = 23;
+      days--;
+    }
+
+    return {
+      'days': {
+        name: days === 1 ? 'день' : days === 2 || days === 3 || days === 4 ? 'дня' : 'дней',
+        value: days
+      },
+      'hours': {
+        name: hours === 1 ? 'час' : hours === 2 || hours === 3 || hours === 4 ? 'часа' : 'часов',
+        value: hours
+      },
+      'minutes': {
+        name: minutes === 1 ? 'минута' : minutes === 2 || minutes === 3 || minutes === 4 ? 'минуты' : 'минут',
+        value: minutes
+      },
+      'seconds': {
+        name: seconds === 1 ? 'секунда' : seconds === 2 || seconds === 3 || seconds === 4 ? 'секунды' : 'секунд',
+        value: seconds
+      }
+    };
+  }
+
+  function initializeClock(id, time) {
+    var clock = document.getElementById(id);
+    var daysSpan = clock.querySelector('.day');
+    var hoursSpan = clock.querySelector('.hour');
+    var minutesSpan = clock.querySelector('.minute');
+    var secondsSpan = clock.querySelector('.second');
+
+    function updateClock() {
+      time = getTimeRemaining(time);
+      daysSpan.innerHTML = "".concat(('0' + time.days.value).slice(-2), " <span>").concat(time.days.name, "</span>");
+      hoursSpan.innerHTML = "".concat(('0' + time.hours.value).slice(-2), " <span>").concat(time.hours.name, "</span>");
+      minutesSpan.innerHTML = "".concat(('0' + time.minutes.value).slice(-2), " <span>").concat(time.minutes.name, "</span>");
+      secondsSpan.innerHTML = "".concat(('0' + time.seconds.value).slice(-2), " <span>").concat(time.seconds.name, "</span>");
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  }
+
+  var timerData = {};
+
+  try {
+    timerData = JSON.parse(date_timer.dataset.time);
+  } catch (err) {
+    timerData = {};
+    new Error(err);
+  }
+
+  if (date_timer) {
+    initializeClock('timer', timerData);
   }
 });

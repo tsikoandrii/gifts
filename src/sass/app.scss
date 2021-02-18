@@ -381,6 +381,14 @@ input {
     margin-bottom: 30px;
   }
 
+  .save-changes {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-top: 40px;
+    z-index: 1 !important;
+  }
+
+
   .profile-name {
     width: 100%;
     text-align: center;
@@ -494,6 +502,17 @@ input {
 
   &-title {
     margin-bottom: 20px;
+  }
+
+  .create-contest-button {
+    z-index: 1;
+    &:before {
+      z-index: -1;
+    }
+    &.disabled {
+      background: rgba(0, 82, 255, 0.5);
+      color: #8196C6;
+    }
   }
 
   input.card-input {
