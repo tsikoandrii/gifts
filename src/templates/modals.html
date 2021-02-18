@@ -1,0 +1,142 @@
+<div class="backdrop hidden" id="backdrop"></div>
+
+<div class="default-modal subscribe-modal" data-component="modal" id="subscribeModal">
+    <div class="profile-avatar">
+        <div class="ava">
+            <img class="avatar" src="img/avatars/vasilisa.png" alt="vasilisa">
+        </div>
+    </div>
+    <p class="default-text">
+        Для участия необходимо подписаться на этого пользователя
+    </p>
+    <div class="default-card">
+        <img class="like-icon" src="img/like.svg" alt="like">
+        <span class="modal-title">
+            Бесплатно
+        </span>
+        <p class="modal-desc">
+            Бесплатное участие на 2 дня.
+            Далее 499 рублей/месяц.
+        </p>
+    </div>
+    <div id="changeModal" class="default-button">
+        Подписаться
+    </div>
+    <div class="default-card other-content">
+        <img class="like-icon" src="img/like.svg" alt="like">
+        <span class="price">
+            499 руб
+        </span>
+    </div>
+    <div id="subClose" class="other-content-button default-button">
+        Подписаться
+    </div>
+    <p class="privacy-terms">
+        Нажав на кнопку, вы соглашаетесь с <a href="/terms.html">условиями использования сервиса</a> и <a href="/privacy.html">политикой конфиденциальности.</a>
+    </p>
+</div>
+<div class="default-modal delete-modal" data-component="modal" id="deleteCardModal">
+    <div class="deleteIcon">
+        <img src="img/delete-icon.svg" alt="deleteIcon">
+    </div>
+    <p class="default-text">
+        Вы уверены что хотите удалить эту карту?
+    </p>
+    <p class="modal-desc">
+        Отменить это будет невозможно
+    </p>
+    <div class="modal-buttons">
+        <button data-control="cancel" class="modal-button">
+            Отменить
+        </button>
+        <button class="modal-button red">
+            Да, удалить
+        </button>
+    </div>
+</div>
+
+<div class="default-modal date-picker" data-component="modal" id="datePicker">
+    <div class="title">Выберите число и месяц</div>
+    <form name="date" class="date-picker-body">
+        <input type="hidden" value="" name="day">
+        <input type="hidden" value="" name="month">
+        <div class="days">
+            <div data-datepicker="prev" data-type="day" class="day">29</div>
+            <div data-current="true" class="current day">30</div>
+            <div data-datepicker="next" data-type="day" class="day">31</div>
+        </div>
+        <div class="months">
+            <div data-datepicker="prev" data-type="month" class="month">Января</div>
+            <div data-current="true" data-month="2" class="month">Февраля</div>
+            <div data-datepicker="next" data-type="month" class="month">Марта</div>
+        </div>
+    </form>
+    <button data-type="submit" class="save default-button decor-button">
+        Сохранить дату
+    </button>
+</div>
+<div class="modal-layer">
+    <div class="default-modal delete-modal" data-component="modal" id="deleteContestModal">
+        <div class="deleteIcon">
+            <img src="img/delete-icon.svg" alt="deleteIcon">
+        </div>
+        <p class="default-text">
+            Вы уверены что хотите удалить этот розыгрыш?
+        </p>
+        <p class="modal-desc">
+            Отменить это будет невозможно
+        </p>
+        <div class="modal-buttons">
+            <button data-control="cancel" class="modal-button">
+                Отменить
+            </button>
+            <button data-control="delete" class="modal-button red">
+                Да, удалить
+            </button>
+        </div>
+    </div>
+</div>
+<div class="default-modal register-modal" data-component="modal" id="registerModal">
+    <p class="default-text">
+        Сохраните логин и пароль, чтобы не потерять доступ к аккаунту.
+    </p>
+
+    <div class="copy-clickable" data-component="copy-data" data-login="qesf24@gift.ru" data-password="7djsu23d">
+        <div class="register-modal-body">
+            <div class="login-field field">
+                <span>Логин</span>
+                qesf24@gift.ru
+            </div>
+            <div class="password-field field">
+                <span>Пароль</span>
+                7djsu23d
+            </div>
+        </div>
+        <div class="notice">Нажмите, чтобы скопировать.</div>
+    </div>
+
+    <a href="/login.html" class="default-button decor-button">
+        Продолжить
+    </a>
+</div>
+<div class="default-modal time-picker" data-component="modal" id="timePicker">
+    <div class="title">Выберите время</div>
+    <div class="time-picker-body">
+        <div class="hours">
+            <div data-timepicker="prev" data-type="hour" class="hour">16</div>
+            <div data-current="true" data-type="hour" class="hour">17</div>
+            <div data-timepicker="next" data-type="hour" class="hour">18</div>
+        </div>
+        <img src="img/2dot.svg" alt="dots">
+        <div class="minutes">
+            <div data-timepicker="prev" data-type="minute" class="minute">58</div>
+            <div data-current="true" data-type="minute" class="minute">59</div>
+            <div data-timepicker="next" data-type="minute" class="minute">00</div>
+        </div>
+    </div>
+    <button data-type="submit" class="save default-button decor-button">
+        Сохранить дату
+    </button>
+</div>
+
+

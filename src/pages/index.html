@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <include src="src/templates/head.html" locals='{"title": "Главная страница"}'></include>
+</head>
+<body>
+  <include src="src/templates/header.html"></include>
+  <div class="home">
+      <div class="container">
+          <div class="cards">
+              <a href="/prize.html" class="card">
+                  <img class="card-img" src="img/cards/card01.png" alt="card01">
+                  <div class="card-info">
+                      <div class="avatar">
+                          <img src="img/avatars/gasanov.png" alt="avatar">
+                      </div>
+                      <div class="text">
+                          <div class="title">iPhone XR</div>
+                          <div class="date">
+                              4 января, в 13:30
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <a href="/prize.html" class="card">
+                  <img class="card-img" src="img/cards/card02.png" alt="card01">
+                  <div class="card-info">
+                      <div class="avatar">
+                          <img src="img/avatars/02.png" alt="avatar">
+                      </div>
+                      <div class="text">
+                          <div class="title">EVOLUTION</div>
+                          <div class="date">
+                              4 января, в 13:30
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <a href="/prize.html" class="card">
+                  <img class="card-img" src="img/cards/card03.png" alt="card01">
+                  <div class="card-info">
+                      <div class="avatar">
+                          <img src="img/avatars/03.png" alt="avatar">
+                      </div>
+                      <div class="text">
+                          <div class="title">KIA</div>
+                          <div class="date">
+                              4 января, в 13:30
+                          </div>
+                      </div>
+                  </div>
+              </a>
+              <a href="/prize.html" class="card">
+                  <img class="card-img" src="img/cards/card04.png" alt="card01">
+                  <div class="card-info">
+                      <div class="avatar">
+                          <img src="img/avatars/04.png" alt="avatar">
+                      </div>
+                      <div class="text">
+                          <div class="title">NISSAN GT-R</div>
+                          <div class="date">
+                              4 января, в 13:30
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="tab">
+      <div class="tab-buttons">
+          <a href="/" class="tab-button active">
+              <img src="img/tabs/home.svg" alt="home">
+          </a>
+          <a href="/add-contest.html" class="plus-button">
+              <img src="img/tabs/plus.svg" alt="plus">
+          </a>
+          <a href="/profile.html" class="tab-button">
+              <img src="img/tabs/user.svg" alt="home">
+          </a>
+      </div>
+  </div>
+  <include src="src/templates/footer.html"></include>
+</body>
+</html>

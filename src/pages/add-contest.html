@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <include src="src/templates/head.html" locals='{"title": "Add Contest"}'></include>
+</head>
+<body>
+  <div class="add-contest-block">
+      <div class="container">
+          <form data-component="file-input" class="contest-image empty">
+              <label>
+                  <input type="file">
+                  <img class="image img" src="">
+                  <div class="delete deleteContest">
+                      <img src="img/delete02.svg" alt="delete">
+                  </div>
+                  <div class="file-drop body">
+                      <img src="img/add.svg" alt="add">
+                      <span>
+                    обложка подарка
+                  </span>
+                  </div>
+              </label>
+          </form>
+          <div class="default-text add-contest-block-title">Какой будет подарок?</div>
+          <input placeholder="Название подарка" type="text" class="card-input">
+          <div class="default-text add-contest-block-title">Дата розыгрыша</div>
+          <div data-component="date-picker" class="card-input">Выбрать дату</div>
+          <div class="default-text add-contest-block-title">Цена розыгрыша</div>
+          <input placeholder="Введите цену" type="number" class="card-input">
+          <div class="default-text add-contest-block-title">Время</div>
+          <div data-component="time-picker" class="card-input">Выбрать время</div>
+          <div class="default-text add-contest-block-title">Описание</div>
+          <textarea placeholder="Введите подробное описание вашего розыгрыша" class="card-input"></textarea>
+          <button class="default-button decor-button">Создать розыгрыш</button>
+      </div>
+  </div>
+  <div class="tab">
+      <div class="tab-buttons">
+          <a href="/" class="tab-button">
+              <img src="img/tabs/home.svg" alt="home">
+          </a>
+          <a href="/add-contest.html" class="plus-button">
+              <img src="img/tabs/plus.svg" alt="plus">
+          </a>
+          <a href="/profile.html" class="tab-button">
+              <img src="img/tabs/user.svg" alt="home">
+          </a>
+      </div>
+  </div>
+  <include src="src/templates/footer.html"></include>
+</body>
+</html>

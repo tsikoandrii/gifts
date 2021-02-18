@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <include src="src/templates/head.html" locals='{"title": "Главная страница"}'></include>
+</head>
+<body>
+  <div class="register">
+      <div class="container">
+          <div class="form-wrapper">
+              <p class="default-text">
+                  Чтобы принять участие в розыгрыше, необходимо зарегистрироваться.
+              </p>
+              <div class="register-buttons">
+                  <a href="#" id="registerModalButton" class="social-button">
+                      <img src="img/socials/incognito.svg" alt="icon">
+                      <span>
+                          регистрация в 1 клик
+                      </span>
+                  </a>
+                  <a href="#" class="social-button green-blue">
+                      <img src="img/socials/facebook.svg" alt="icon">
+                      <span>
+                          c помощью Facebook
+                      </span>
+                  </a>
+                  <a href="#" class="social-button light-blue">
+                      <img src="img/socials/vk.svg" alt="icon">
+                      <span>
+                          c помощью ВКонтакте
+                      </span>
+                  </a>
+              </div>
+              <a href="/login-m.html" class="decor-link">Уже есть аккаунт. Войти</a>
+              <div class="privacy-terms">
+                  Нажав на кнопку, вы соглашаетесь с <a href="/privacy.html">условиями использования сервиса</a> и <a href="/terms.html">политикой конфиденциальности.</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <include src="src/templates/footer.html"></include>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <include src="src/templates/head.html" locals='{"title": "Главная страница"}'></include>
+</head>
+<body>
+  <div class="register login">
+      <div class="container">
+          <div class="form-wrapper">
+              <p class="default-text">
+                  Чтобы принять участие в розыгрыше, необходимо авторизоваться.
+              </p>
+              <div class="inputs">
+                  <input name="login" placeholder="Логин" type="text" class="default-input">
+                  <input name="password" placeholder="Пароль" type="password" class="default-input">
+                  <a href="#" class="social-button">
+                      <img src="img/socials/incognito.svg" alt="icon">
+                      <span>
+                          войти
+                      </span>
+                  </a>
+              </div>
+              <div class="and">
+                  <span>или</span>
+              </div>
+              <div class="register-buttons">
+                  <a href="#" class="social-button green-blue">
+                      <img src="img/socials/facebook.svg" alt="icon">
+                      <span>
+                          c помощью Facebook
+                      </span>
+                  </a>
+                  <a href="#" class="social-button light-blue">
+                      <img src="img/socials/vk.svg" alt="icon">
+                      <span>
+                          c помощью ВКонтакте
+                      </span>
+                  </a>
+              </div>
+              <a href="#" class="decor-link">Нет аккаунта. Зарегистрироваться</a>
+              <div class="privacy-terms">
+                  Нажав на кнопку, вы соглашаетесь с <a href="/privacy.html">условиями использования сервиса</a> и <a href="/terms.html">политикой конфиденциальности.</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<script defer="" src="/js/libs.min.js"></script>
+<script defer="" src="/js/app.js"></script>
+
+</body>
+</html>

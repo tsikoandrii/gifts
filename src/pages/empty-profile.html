@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <include src="src/templates/head.html" locals='{"title": "Главная страница"}'></include>
+</head>
+<body>
+  <div class="profile">
+      <div class="container">
+          <form class="profile-avatar" data-component="file-input">
+              <div class="ava">
+                  <img class="avatar img" src="img/user.svg" alt="vasilisa">
+              </div>
+              <label class="edit-button">
+                  <input name="file" type="file">
+                  <img src="img/edit.svg" alt="edit">
+              </label>
+          </form>
+          <input value="Василиса Константиновна" class="card-input profile-name" placeholder="Имя">
+          <div class="default-text profile-title">У вас нет активных розыгрышей</div>
+          <a href="/add-contest.html" class="add-contest default-card">
+              <img src="img/add.svg" alt="add">
+              <span>
+                  создать сейчас
+              </span>
+          </a>
+          <div class="cards bg-effects">
+              <div class="default-text profile-title">Персональная статистика</div>
+              <div class="statistic-card default-card">
+                  <img src="img/stats/subs.svg" alt="subs" class="icon">
+                  <div class="info">
+                      <span class="value">0</span>
+                      <span class="unit">подписчиков</span>
+                  </div>
+              </div>
+              <div class="statistic-card default-card">
+                  <img src="img/stats/done.svg" alt="done" class="icon">
+                  <div class="info">
+                      <span class="value">0</span>
+                      <span class="unit">посетило ваши розыгрыши</span>
+                  </div>
+              </div>
+              <div class="statistic-card default-card">
+                  <img src="img/stats/acc-balance.svg" alt="balance" class="icon">
+                  <div class="info">
+                      <span class="value">0</span>
+                      <span class="unit">подписчиков</span>
+                  </div>
+              </div>
+          </div>
+          <div class="default-text profile-title">Вывести деньги</div>
+          <div class="output">
+              <input placeholder="Введите номер банковской карты" type="text" class="card-input">
+              <button class="default-button add-requisite decor-button">
+                  Вывести всю сумму
+              </button>
+          </div>
+          <div class="default-text profile-title">Способы оплаты</div>
+          <div class="payment">
+              <div class="add-req-block" id="addNewCard">
+                  <div class="add-req-input">
+                      <input type="text" placeholder="Номер банковской карты" class="card-input">
+                      <button class="add default-button">Добавить</button>
+                  </div>
+                  <button class="default-button add-requisite" data-component="addNewCardButton">
+                      Добавить новую карту
+                  </button>
+              </div>
+          </div>
+<!--          <div class="default-text profile-title">Стоимость подписки</div>-->
+<!--          <div class="default-card subs-price">-->
+<!--              <input type="text" placeholder="249 ₽">-->
+
+<!--          </div>-->
+          <div class="default-text profile-title">Бесплатная подписка</div>
+          <div class="default-card free-sub">
+            <span>
+                Первые 5 дней бесплатно
+            </span>
+            <label class="cb">
+                <input type="checkbox" name="free-subscribe">
+                <div class="cb-body"></div>
+            </label>
+          </div>
+      </div>
+  </div>
+  <div class="tab">
+      <div class="tab-buttons">
+          <a href="/" class="tab-button">
+              <img src="img/tabs/home.svg" alt="home">
+          </a>
+          <a href="/add-contest.html" class="plus-button">
+              <img src="img/tabs/plus.svg" alt="plus">
+          </a>
+          <a href="/profile.html" class="tab-button active">
+              <img src="img/tabs/user.svg" alt="home">
+          </a>
+      </div>
+  </div>
+  <include src="src/templates/footer.html"></include>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Политика - https://tsiko-work.000webhostapp.com/privacy.html
+Правила - https://tsiko-work.000webhostapp.com/terms.html
+Главная - https://tsiko-work.000webhostapp.com/
+Логин - https://tsiko-work.000webhostapp.com/login.html
+Логин 2 - https://tsiko-work.000webhostapp.com/login-m.html
+Register - https://tsiko-work.000webhostapp.com/register.html
+Register 2 - https://tsiko-work.000webhostapp.com/unregistered.html
+Я участвую - https://tsiko-work.000webhostapp.com/participation.html
+Страница конкурса - https://tsiko-work.000webhostapp.com/prize.html
+Профиль - https://tsiko-work.000webhostapp.com/profile.html
+Профиль (пустой) - https://tsiko-work.000webhostapp.com/empty-profile.html
