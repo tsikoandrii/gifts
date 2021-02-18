@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Главная страница</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preload" href="/css/libs.min.css" as="style">
+<link rel="preload" href="/css/app.css" as="style">
+<link rel="stylesheet" href="/css/libs.min.css">
+<link rel="stylesheet" href="/css/app.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div id="output"></div>
+  <div class="profile">
+      <div class="container">
+          <form class="profile-avatar" data-component="file-input">
+              <div class="ava">
+                  <img class="avatar img" src="img/avatars/vasilisa.png" alt="vasilisa">
+              </div>
+              <label class="edit-button">
+                  <input name="file" type="file">
+                  <img src="img/edit.svg" alt="edit">
+              </label>
+          </form>
+          <input value="Василиса Константиновна" class="card-input profile-name" placeholder="Имя">
+          <div class="default-text profile-title">Ваши розыгрыши</div>
+          <div class="cards">
+              <div class="card">
+                  <img class="card-img" src="img/cards/card01.png" alt="card01">
+                  <div class="card-info">
+                      <div class="avatar">
+                          <img src="img/avatars/vasilisa02.png" alt="avatar">
+                      </div>
+                      <div class="text">
+                          <div class="title">iPhone XR</div>
+                          <div class="date">
+                              4 января, в 13:30
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-toolkit">
+                      <button class="delete deleteContest">
+                          <img src="img/delete.svg" alt="delete">
+                      </button>
+                      <button data-component="copy-link" data-url="/prize.html" class="share">
+                          <img src="img/share.svg" alt="share">
+                      </button>
+                  </div>
+              </div>
+              <div class="card">
+                  <img class="card-img" src="img/cards/card03.png" alt="card01">
+                  <div class="card-info">
+                      <div class="avatar">
+                          <img src="img/avatars/vasilisa02.png" alt="avatar">
+                      </div>
+                      <div class="text">
+                          <div class="title">KIA</div>
+                          <div class="date">
+                              4 января, в 13:30
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-toolkit">
+                      <button class="delete deleteContest">
+                          <img src="img/delete.svg" alt="delete">
+                      </button>
+                      <button data-component="copy-link" class="share" data-url="/prize.html">
+                          <img src="img/share.svg" alt="share">
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="cards bg-effects">
+              <div class="default-text profile-title">Персональная статистика</div>
+              <div class="statistic-card default-card">
+                  <img src="img/stats/subs.svg" alt="subs" class="icon">
+                  <div class="info">
+                      <span class="value">15 054</span>
+                      <span class="unit">подписчиков</span>
+                  </div>
+              </div>
+              <div class="statistic-card default-card">
+                  <img src="img/stats/done.svg" alt="done" class="icon">
+                  <div class="info">
+                      <span class="value">54 516</span>
+                      <span class="unit">посетило ваши розыгрыши</span>
+                  </div>
+              </div>
+              <div class="statistic-card default-card">
+                  <img src="img/stats/acc-balance.svg" alt="balance" class="icon">
+                  <div class="info">
+                      <span class="value">15 054</span>
+                      <span class="unit">подписчиков</span>
+                  </div>
+              </div>
+          </div>
+          <div class="default-text profile-title">Вывести деньги</div>
+          <div class="output">
+              <input placeholder="Введите номер банковской карты" type="text" class="card-input">
+              <button class="default-button add-requisite decor-button">
+                  Вывести всю сумму
+              </button>
+          </div>
+          <div class="default-text profile-title">Способы оплаты</div>
+          <div class="payment">
+              <div class="requisites">
+                  <div class="requisite">
+                      <div class="requisite-info">
+                        <div class="value default-card">
+                            4276 23** **** 6372
+                        </div>
+                        <div class="payment-system default-card">
+                            <img src="img/payment-systems/visa.svg" alt="visa">
+                        </div>
+                      </div>
+                      <div class="delete default-card" id="deleteCardButton">
+                          <img src="img/delete-icon.svg" alt="delete">
+                      </div>
+                  </div>
+              </div>
+              <div class="add-req-block" id="addNewCard">
+                  <div class="add-req-input">
+                      <input type="text" placeholder="Номер банковской карты" class="card-input">
+                      <button class="add default-button">Добавить</button>
+                  </div>
+                  <button class="default-button add-requisite" data-component="addNewCardButton">
+                      Добавить новую карту
+                  </button>
+              </div>
+          </div>
+<!--          <div class="default-text profile-title">Стоимость подписки</div>-->
+<!--          <div class="default-card subs-price">-->
+<!--              <input type="text" placeholder="249 ₽">-->
+<!--          </div>-->
+          <div class="default-text profile-title">Бесплатная подписка</div>
+          <div class="default-card free-sub">
+            <span>
+                Первые 5 дней бесплатно
+            </span>
+            <label class="cb">
+                <input type="checkbox" name="free-subscribe">
+                <div class="cb-body"></div>
+            </label>
+          </div>
+      </div>
+  </div>
+<div class="tab">
+    <div class="tab-buttons">
+        <a href="/" class="tab-button">
+            <img src="img/tabs/home.svg" alt="home">
+        </a>
+        <a href="/add-contest.html" class="plus-button">
+            <img src="img/tabs/plus.svg" alt="plus">
+        </a>
+        <a href="/profile.html" class="tab-button active">
+            <img src="img/tabs/user.svg" alt="home">
+        </a>
+    </div>
+</div>
+  
+<div class="backdrop hidden" id="backdrop"></div>
+
+<div class="default-modal subscribe-modal" data-component="modal" id="subscribeModal">
+    <div class="profile-avatar">
+        <div class="ava">
+            <img class="avatar" src="img/avatars/vasilisa.png" alt="vasilisa">
+        </div>
+    </div>
+    <p class="default-text">
+        Для участия необходимо подписаться на этого пользователя
+    </p>
+    <div class="default-card">
+        <img class="like-icon" src="img/like.svg" alt="like">
+        <span class="modal-title">
+            Бесплатно
+        </span>
+        <p class="modal-desc">
+            Бесплатное участие на 2 дня.
+            Далее 499 рублей/месяц.
+        </p>
+    </div>
+    <div id="changeModal" class="default-button">
+        Подписаться
+    </div>
+    <div class="default-card other-content">
+        <img class="like-icon" src="img/like.svg" alt="like">
+        <span class="price">
+            499 руб
+        </span>
+    </div>
+    <div id="subClose" class="other-content-button default-button">
+        Подписаться
+    </div>
+    <p class="privacy-terms">
+        Нажав на кнопку, вы соглашаетесь с <a href="/terms.html">условиями использования сервиса</a> и <a href="/privacy.html">политикой конфиденциальности.</a>
+    </p>
+</div>
+<div class="default-modal delete-modal" data-component="modal" id="deleteCardModal">
+    <div class="deleteIcon">
+        <img src="img/delete-icon.svg" alt="deleteIcon">
+    </div>
+    <p class="default-text">
+        Вы уверены что хотите удалить эту карту?
+    </p>
+    <p class="modal-desc">
+        Отменить это будет невозможно
+    </p>
+    <div class="modal-buttons">
+        <button data-control="cancel" class="modal-button">
+            Отменить
+        </button>
+        <button class="modal-button red">
+            Да, удалить
+        </button>
+    </div>
+</div>
+
+<div class="default-modal date-picker" data-component="modal" id="datePicker">
+    <div class="title">Выберите число и месяц</div>
+    <form name="date" class="date-picker-body">
+        <input type="hidden" value="" name="day">
+        <input type="hidden" value="" name="month">
+        <div class="days">
+            <div data-datepicker="prev" data-type="day" class="day">29</div>
+            <div data-current="true" class="current day">30</div>
+            <div data-datepicker="next" data-type="day" class="day">31</div>
+        </div>
+        <div class="months">
+            <div data-datepicker="prev" data-type="month" class="month">Января</div>
+            <div data-current="true" data-month="2" class="month">Февраля</div>
+            <div data-datepicker="next" data-type="month" class="month">Марта</div>
+        </div>
+    </form>
+    <button data-type="submit" class="save default-button decor-button">
+        Сохранить дату
+    </button>
+</div>
+<div class="modal-layer">
+    <div class="default-modal delete-modal" data-component="modal" id="deleteContestModal">
+        <div class="deleteIcon">
+            <img src="img/delete-icon.svg" alt="deleteIcon">
+        </div>
+        <p class="default-text">
+            Вы уверены что хотите удалить этот розыгрыш?
+        </p>
+        <p class="modal-desc">
+            Отменить это будет невозможно
+        </p>
+        <div class="modal-buttons">
+            <button data-control="cancel" class="modal-button">
+                Отменить
+            </button>
+            <button data-control="delete" class="modal-button red">
+                Да, удалить
+            </button>
+        </div>
+    </div>
+</div>
+<div class="default-modal register-modal" data-component="modal" id="registerModal">
+    <p class="default-text">
+        Сохраните логин и пароль, чтобы не потерять доступ к аккаунту.
+    </p>
+
+    <div class="copy-clickable" data-component="copy-data" data-login="qesf24@gift.ru" data-password="7djsu23d">
+        <div class="register-modal-body">
+            <div class="login-field field">
+                <span>Логин</span>
+                qesf24@gift.ru
+            </div>
+            <div class="password-field field">
+                <span>Пароль</span>
+                7djsu23d
+            </div>
+        </div>
+        <div class="notice">Нажмите, чтобы скопировать.</div>
+    </div>
+
+    <a href="/login.html" class="default-button decor-button">
+        Продолжить
+    </a>
+</div>
+<div class="default-modal time-picker" data-component="modal" id="timePicker">
+    <div class="title">Выберите время</div>
+    <div class="time-picker-body">
+        <div class="hours">
+            <div data-timepicker="prev" data-type="hour" class="hour">16</div>
+            <div data-current="true" data-type="hour" class="hour">17</div>
+            <div data-timepicker="next" data-type="hour" class="hour">18</div>
+        </div>
+        <img src="img/2dot.svg" alt="dots">
+        <div class="minutes">
+            <div data-timepicker="prev" data-type="minute" class="minute">58</div>
+            <div data-current="true" data-type="minute" class="minute">59</div>
+            <div data-timepicker="next" data-type="minute" class="minute">00</div>
+        </div>
+    </div>
+    <button data-type="submit" class="save default-button decor-button">
+        Сохранить дату
+    </button>
+</div>
+
+
+
+<script>
+  let today = new Date();
+
+  const currentDate = {
+    day: 30,
+    month: 1,
+    year: today.getFullYear(),
+    hours: 0,
+    minutes: 59,
+  }
+</script>
+<script defer="" src="/js/libs.min.js"></script>
+<script defer="" src="/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1385 @@
+@charset "UTF-8";
+/**
+  Переменные для отступов
+ */
+/**
+  Переменные для цветов
+ */
+/**
+  Переменные для шрифтов
+ */
+@import url(../fonts/stylename.css);
+.container {
+  max-width: 1400px; }
+
+/**
+  Десктоп маленький
+ */
+/**
+  Планшет горизонтальный
+ */
+@media screen and (max-width: 1279px) {
+  .container {
+    max-width: 100%; } }
+
+/**
+  Планшет вертикальный
+ */
+/**
+  Мобильные устройства
+ */
+button {
+  outline: none !important; }
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1120px;
+  margin: 0 auto; }
+
+html, body {
+  overflow-x: hidden; }
+
+.default-modal {
+  position: fixed;
+  background: #08091B;
+  border-radius: 15px 15px 0px 0px;
+  padding: 60px 16px 30px 16px;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transform: translate(0, 100%);
+  transition: transform 1s ease;
+  will-change: transform;
+  bottom: 0; }
+  .default-modal .modal-buttons {
+    max-width: 311px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .default-modal .modal-button {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+    padding: 18px 30px;
+    background: #14142B;
+    border-radius: 15px;
+    margin-top: 51px; }
+    .default-modal .modal-button.red {
+      background: #E24444; }
+  .default-modal.active {
+    transform: translate(0, 0px);
+    transition: transform 1s ease; }
+  .default-modal .modal-title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+    margin-bottom: 10px; }
+  .default-modal .default-card {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .default-modal .default-card .like-icon {
+      width: 69px;
+      height: 69px;
+      margin-bottom: 18px; }
+  .default-modal .modal-desc {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.3; }
+
+.default-card {
+  background: #14142B;
+  border-radius: 15px;
+  padding: 16px 26px; }
+  .default-card .title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 135%;
+    color: #FFFFFF; }
+
+.default-h4 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF; }
+
+.default-text {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 135%;
+  color: #FFFFFF; }
+
+.default-input {
+  padding: 13px 26px;
+  background: transparent;
+  border: 1.3px solid #E6E6E8;
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF !important;
+  outline: none; }
+  .default-input:-ms-input-placeholder {
+    color: #FFFFFF; }
+  .default-input::placeholder {
+    color: #FFFFFF; }
+  .default-input:focus {
+    color: #e5e3e3 !important; }
+
+.default-button {
+  width: 100%;
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  background: #0052ff;
+  border-radius: 13px;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 135%;
+  color: #FFFFFF;
+  border: none;
+  text-decoration: none !important; }
+  .default-button img {
+    margin-left: 20px; }
+  .default-button:hover {
+    color: #fff; }
+
+.decor-link {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #CECED2;
+  border-bottom: 1px solid #CECED2;
+  padding-bottom: 6px;
+  text-decoration: none !important; }
+  .decor-link:hover {
+    color: #CECED2;
+    opacity: 0.8; }
+
+.decor-button {
+  position: relative;
+  align-items: center;
+  z-index: -1; }
+  .decor-button:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 249px;
+    height: 249px;
+    background: url("../img/bg/elipse01.svg"); }
+
+input {
+  position: relative;
+  z-index: 20; }
+
+.privacy, .terms {
+  background: #08091B;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  padding-top: 83px;
+  padding-bottom: 35px; }
+  .privacy .container, .terms .container {
+    padding-bottom: 65px; }
+  .privacy .default-h4, .terms .default-h4 {
+    margin-bottom: 25px; }
+
+.home {
+  padding-top: 87px;
+  background: #08091B;
+  padding-bottom: 170px;
+  min-height: 100vh; }
+
+.login {
+  padding-top: 135px !important; }
+  .login .default-text {
+    margin-bottom: 50px; }
+  .login .decor-link {
+    margin-bottom: 33px !important; }
+
+.prize {
+  width: 100%;
+  background-color: #08091B; }
+  .prize-image {
+    width: 100%;
+    overflow: hidden; }
+    @media screen and (min-width: 1120px) {
+      .prize-image {
+        width: 1080px;
+        margin: 0 auto; } }
+    .prize-image img {
+      width: 100%; }
+  .prize .container {
+    padding-top: 30px;
+    padding-bottom: 60px; }
+  .prize .time-card {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+    .prize .time-card .decor-button {
+      z-index: 0; }
+  .prize .participant-range {
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 32px; }
+
+.other-bg {
+  background: url("../img/bg/02.png") !important; }
+
+.register {
+  background-color: #08091B;
+  background-image: url("../img/bg/elipse01.svg"), url("../img/bg/elipse01.svg");
+  background-position: center center, center bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  padding-top: 250px;
+  justify-content: center; }
+  .register .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+  .register .default-text {
+    max-width: 310px;
+    text-align: center;
+    margin-bottom: 61px; }
+  .register .register-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px; }
+    .register .register-buttons .social-button {
+      margin-bottom: 10px; }
+      .register .register-buttons .social-button:last-child {
+        margin-bottom: 0; }
+  .register .inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .register .inputs input {
+      width: 100%;
+      margin-bottom: 13px; }
+      .register .inputs input:last-child {
+        margin-bottom: 0; }
+  .register .decor-link {
+    text-align: center;
+    margin-bottom: 79px; }
+  .register .and {
+    width: 100%;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; }
+    .register .and:before {
+      content: "";
+      display: block;
+      background: #FFFFFF;
+      height: 1px;
+      left: 0;
+      right: calc(50% + 30px);
+      position: absolute;
+      border-radius: 1px; }
+    .register .and:after {
+      content: "";
+      display: block;
+      background: #FFFFFF;
+      height: 1px;
+      right: 0;
+      left: calc(50% + 30px);
+      position: absolute;
+      border-radius: 1px; }
+
+.profile {
+  min-height: 100vh;
+  background-color: #08091B; }
+  .profile .container {
+    padding: 70px 16px 246px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .profile .profile-avatar {
+    margin-bottom: 30px; }
+  .profile .profile-name {
+    width: 100%;
+    text-align: center;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 35px; }
+  .profile .profile-title {
+    margin-bottom: 20px;
+    align-self: flex-start; }
+  .profile .cards {
+    width: 100%;
+    margin-bottom: 35px; }
+  .profile .bg-effects {
+    position: relative;
+    z-index: 0; }
+    .profile .bg-effects:before {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 748px;
+      background-image: url("../img/bg/bg-ef.svg");
+      top: -200px;
+      left: -16px;
+      z-index: 0; }
+    .profile .bg-effects:after {
+      position: absolute;
+      content: "";
+      width: 284px;
+      height: 468px;
+      background: url("../img/bg/green-ellipse.svg");
+      top: -50px;
+      right: -16px;
+      z-index: 0; }
+  .profile .statistic-card {
+    width: 100%;
+    margin-bottom: 15px; }
+    .profile .statistic-card:last-child {
+      margin-bottom: 0; }
+  .profile .output {
+    width: 100%;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 15; }
+    .profile .output .card-input {
+      width: 100%;
+      margin-bottom: 14px;
+      outline: none; }
+    .profile .output .add-requisite {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+  .profile .subs-price {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .profile .subs-price input {
+      outline: none;
+      border: none;
+      background: transparent;
+      min-width: 28px;
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #FFFFFF; }
+      .profile .subs-price input:-ms-input-placeholder {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF !important; }
+      .profile .subs-price input::placeholder {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF !important; }
+
+.add-contest-block {
+  background: #08091B;
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 95px; }
+  .add-contest-block-title {
+    margin-bottom: 20px; }
+  .add-contest-block input.card-input {
+    -webkit-appearance: none;
+    margin-bottom: 30px;
+    width: 100%;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    outline: none; }
+    .add-contest-block input.card-input:hover {
+      -webkit-appearance: none; }
+    .add-contest-block input.card-input:-ms-input-placeholder {
+      color: #FFFFFF; }
+    .add-contest-block input.card-input::placeholder {
+      color: #FFFFFF; }
+  .add-contest-block .card-input {
+    margin-bottom: 30px;
+    width: 100%;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF; }
+  .add-contest-block textarea.card-input {
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    outline: none;
+    height: 306px;
+    resize: none; }
+    .add-contest-block textarea.card-input:-ms-input-placeholder {
+      color: #FFFFFF; }
+    .add-contest-block textarea.card-input::placeholder {
+      color: #FFFFFF; }
+  .add-contest-block .default-button.decor-button {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .add-contest-block .contest-image {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    height: 350px; }
+    .add-contest-block .contest-image input[type="file"] {
+      display: none; }
+    .add-contest-block .contest-image .body {
+      display: block; }
+    .add-contest-block .contest-image.empty {
+      width: 100%;
+      height: 350px;
+      background: #14142B;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .add-contest-block .contest-image.empty .delete {
+        display: none !important; }
+      .add-contest-block .contest-image.empty label {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .add-contest-block .contest-image.empty .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .add-contest-block .contest-image.empty .body span {
+          font-family: SF Pro Display;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+          color: #FFFFFF; }
+        .add-contest-block .contest-image.empty .body img {
+          width: 150px;
+          margin-bottom: 0px; }
+      .add-contest-block .contest-image.empty .deleteContest {
+        display: none; }
+    .add-contest-block .contest-image img.image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 14;
+      left: 0;
+      top: 0;
+      display: none; }
+      .add-contest-block .contest-image img.image.no-hidden {
+        display: block; }
+    .add-contest-block .contest-image .delete {
+      display: block !important;
+      position: absolute;
+      z-index: 16;
+      top: 23px;
+      right: 23px; }
+      .add-contest-block .contest-image .delete img {
+        width: 45px; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+.cb {
+  margin-bottom: 0; }
+  .cb-body {
+    width: 28px;
+    height: 28px;
+    background: #2A2A57;
+    border-radius: 7px; }
+  .cb input {
+    display: none; }
+  .cb input:checked + .cb-body {
+    position: relative;
+    background-color: #0052ff;
+    background-image: url("../img/agree.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: center; }
+    .cb input:checked + .cb-body:after {
+      position: absolute;
+      content: '';
+      width: 44px;
+      height: 44px;
+      background: #0052FF;
+      filter: blur(100px); }
+
+.free-sub {
+  width: 100%;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  align-items: center; }
+
+.statistic-card {
+  padding: 16px !important;
+  display: flex;
+  align-items: center; }
+  .statistic-card .icon {
+    margin-right: 22px; }
+    .statistic-card .icon img {
+      width: 68px; }
+  .statistic-card .value {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF; }
+  .statistic-card .unit {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    color: #898995;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column; }
+
+.profile-avatar {
+  width: 155px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .profile-avatar input[type="file"] {
+    display: none; }
+  .profile-avatar .ava {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .profile-avatar .ava:before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 421px;
+      height: 421px;
+      background: url("../img/bg/elipse02.svg");
+      background-repeat: no-repeat; }
+  .profile-avatar img.avatar {
+    border-radius: 100%;
+    max-height: 155px;
+    width: 155px; }
+  .profile-avatar .edit-button {
+    margin-top: -20px;
+    position: relative;
+    z-index: 10; }
+    .profile-avatar .edit-button img {
+      width: 40px; }
+
+.back {
+  position: fixed;
+  top: 35px;
+  left: 18px;
+  border: none;
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  outline: none !important; }
+  .back img {
+    width: 15px; }
+
+.navbar {
+  display: flex;
+  width: 100%;
+  background: #14142B;
+  padding: 21px 20px 26px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; }
+  .navbar .nav-item {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 135%;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    opacity: 0.5;
+    flex-direction: column;
+    margin-right: 27px;
+    position: relative;
+    text-decoration: none !important; }
+    .navbar .nav-item:last-child {
+      margin-right: 0px; }
+    .navbar .nav-item:after {
+      position: absolute;
+      content: "";
+      display: none;
+      width: 21px;
+      height: 4px;
+      background: #FFFFFF;
+      border-radius: 2px;
+      bottom: -7px; }
+    .navbar .nav-item.active {
+      opacity: 1; }
+      .navbar .nav-item.active:after {
+        display: block; }
+
+.card {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 25px;
+  display: block;
+  position: relative;
+  z-index: 15; }
+  .card:last-child {
+    margin-bottom: 0; }
+  .card img.card-img {
+    width: 100%;
+    height: auto; }
+  .card-info {
+    position: absolute;
+    z-index: 11;
+    background: rgba(7, 10, 19, 0.65);
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 20px;
+    bottom: 20px;
+    padding-right: 21px; }
+    .card-info .avatar {
+      margin-right: 8px; }
+      .card-info .avatar img {
+        width: 35px;
+        height: 35px; }
+    .card-info .text .title {
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 135%;
+      color: #FFFFFF; }
+    .card-info .text .date {
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 130%;
+      color: #FFFFFF;
+      opacity: 0.6; }
+  .card-toolkit {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex; }
+    .card-toolkit button {
+      border: none;
+      padding: 0;
+      margin: 0;
+      background: transparent; }
+    .card-toolkit .delete {
+      margin-right: 20px; }
+
+.privacy-terms {
+  max-width: 310px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #393C4D; }
+  .privacy-terms a {
+    text-decoration: underline;
+    color: inherit; }
+
+.author-card {
+  display: flex;
+  align-items: center; }
+  .author-card .avatar {
+    margin-right: 14px; }
+    .author-card .avatar img {
+      width: 38px !important; }
+  .author-card .author-name {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 135%;
+    color: #878790;
+    margin-top: 3px; }
+
+.time-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px; }
+  .time-card-title {
+    font-weight: bold;
+    font-size: 12px !important;
+    text-align: center;
+    margin-bottom: 20px; }
+  .time-card .time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  .time-card .unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 135%;
+    color: #FFFFFF;
+    position: relative;
+    justify-content: center; }
+    .time-card .unit span {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1; }
+    .time-card .unit:last-child {
+      padding-right: 0; }
+      .time-card .unit:last-child:before {
+        position: absolute;
+        left: -2px;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 34px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 2px; }
+    .time-card .unit:first-child {
+      padding-left: 0; }
+      .time-card .unit:first-child:after {
+        position: absolute;
+        right: -2px;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 34px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 2px; }
+    .time-card .unit:nth-child(2):after {
+      position: absolute;
+      right: -2px;
+      content: "";
+      display: block;
+      width: 2px;
+      height: 34px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 2px; }
+
+.participant-range {
+  display: flex;
+  flex-direction: column; }
+  .participant-range .range {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: #161629;
+    border-radius: 15px;
+    margin-bottom: 15px; }
+    .participant-range .range span {
+      height: 100%;
+      width: 52%;
+      background: #0052FF;
+      border-radius: 15px;
+      display: block; }
+  .participant-range .info {
+    display: flex;
+    justify-content: space-between;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 135%;
+    color: #FFFFFF; }
+    .participant-range .info .places {
+      color: #878790; }
+
+.terms-text {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 135%;
+  color: #FFFFFF;
+  opacity: 0.1;
+  margin-top: 20px; }
+  .terms-text a {
+    text-decoration: underline;
+    color: #fff; }
+
+.about-card {
+  padding: 30px 16px 45px 16px; }
+  .about-card .about-title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 135%;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px; }
+  .about-card .about-desc {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #CFCFD3;
+    margin-bottom: 0; }
+
+.card-input {
+  background: #14142B;
+  border-radius: 15px;
+  padding: 20px 16px;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  color: #6A7088;
+  outline: none; }
+  .card-input:-ms-input-placeholder {
+    color: #6A7088; }
+  .card-input::placeholder {
+    color: #6A7088; }
+
+.payment {
+  width: 100%;
+  margin-bottom: 35px; }
+  .payment .requisite {
+    display: flex;
+    margin-bottom: 12px; }
+    .payment .requisite:last-child {
+      margin-bottom: 0; }
+    .payment .requisite-info {
+      display: flex;
+      align-items: center;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      height: 60px; }
+      .payment .requisite-info .value {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        padding: 20px 24px 20px 16px;
+        height: 60px;
+        white-space: nowrap; }
+        @media screen and (max-width: 370px) {
+          .payment .requisite-info .value {
+            font-size: 14px;
+            padding-left: 14px;
+            padding-right: 20px;
+            max-width: 300px;
+            width: 100%;
+            overflow-x: scroll; } }
+      .payment .requisite-info .payment-system {
+        height: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-left: 2px;
+        padding-left: 14px;
+        padding-right: 19px; }
+        @media screen and (max-width: 370px) {
+          .payment .requisite-info .payment-system {
+            padding-left: 12px;
+            padding-right: 17px; } }
+        .payment .requisite-info .payment-system img {
+          width: 49px; }
+          @media screen and (max-width: 370px) {
+            .payment .requisite-info .payment-system img {
+              width: 40px; } }
+    .payment .requisite .delete {
+      padding: 0;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto; }
+      @media screen and (max-width: 340px) {
+        .payment .requisite .delete {
+          margin-left: 10px; } }
+      .payment .requisite .delete img {
+        width: 15px;
+        height: 15px; }
+        @media screen and (max-width: 370px) {
+          .payment .requisite .delete img {
+            width: 10px;
+            height: 10px; } }
+  .payment button.add-requisite {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 12px;
+    background: #14142B; }
+    .payment button.add-requisite.active {
+      display: none; }
+  .payment .add-req-block.active .add-req-input {
+    display: flex; }
+  .payment .add-req-block.active .add-requisite {
+    display: none; }
+  .payment .add-req-input {
+    display: none;
+    flex-wrap: nowrap;
+    margin-top: 12px; }
+    .payment .add-req-input input {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      outline: none;
+      width: 65%; }
+    .payment .add-req-input .add {
+      align-items: center;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      width: 35%; }
+
+.add-contest {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 33px;
+  padding-bottom: 39px;
+  margin-bottom: 30px;
+  text-decoration: none !important; }
+  .add-contest img {
+    width: 80px; }
+  .add-contest span {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF; }
+
+.tab {
+  position: fixed !important;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  background: #0F0F21;
+  padding: 10px;
+  display: flex;
+  justify-content: center; }
+  .tab .tab-buttons {
+    display: flex;
+    align-items: center; }
+    .tab .tab-buttons .tab-button.active {
+      display: flex;
+      position: relative;
+      justify-content: center; }
+      .tab .tab-buttons .tab-button.active svg path {
+        opacity: 1; }
+      .tab .tab-buttons .tab-button.active svg g {
+        opacity: 1; }
+      .tab .tab-buttons .tab-button.active:after {
+        position: absolute;
+        content: "";
+        display: block;
+        background: #0052FF;
+        border-radius: 2px;
+        width: 9px;
+        height: 4px;
+        bottom: -9px; }
+    .tab .tab-buttons .plus-button {
+      margin-left: 70px;
+      margin-right: 70px; }
+
+.social-button {
+  position: relative;
+  max-width: 310px;
+  width: 100%;
+  padding: 13px 0;
+  background: #135FFF;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important; }
+  .social-button.green-blue {
+    background: #157DC3; }
+  .social-button.light-blue {
+    background: #5181B8; }
+  .social-button img {
+    position: absolute;
+    left: 26px;
+    width: 18px; }
+  .social-button span {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF; }
+
+.plus-button {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0052FF;
+  border-radius: 100%;
+  position: relative; }
+  .plus-button:after {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    content: "";
+    display: block;
+    background: #0052FF;
+    filter: blur(40px); }
+  .plus-button img {
+    width: 17px; }
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; }
+  .backdrop.hidden {
+    display: none; }
+
+.subscribe-modal .other-content .price {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF; }
+
+.subscribe-modal.changed {
+  padding-left: 10px;
+  padding-right: 10px; }
+  .subscribe-modal.changed .default-button {
+    display: none; }
+    .subscribe-modal.changed .default-button.other-content-button {
+      display: flex; }
+  .subscribe-modal.changed .default-card {
+    display: none; }
+    .subscribe-modal.changed .default-card .modal-title {
+      text-align: center; }
+    .subscribe-modal.changed .default-card .modal-desc {
+      max-width: 311px !important; }
+    .subscribe-modal.changed .default-card.other-content {
+      display: flex; }
+
+.subscribe-modal .other-content {
+  display: none; }
+
+.subscribe-modal .other-content-button {
+  display: none; }
+
+.subscribe-modal .profile-avatar {
+  margin-bottom: 30px; }
+  .subscribe-modal .profile-avatar .ava img {
+    width: 100px; }
+
+.subscribe-modal .default-text {
+  width: 100%;
+  max-width: 268px;
+  text-align: center;
+  margin-bottom: 27px; }
+
+.subscribe-modal .modal-desc {
+  max-width: 184px;
+  width: 100%; }
+
+.subscribe-modal .default-button {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-top: 14px;
+  margin-bottom: 20px; }
+
+.subscribe-modal .privacy-terms {
+  max-width: 350px; }
+
+* {
+  z-index: 5; }
+
+.delete-modal .modal-desc {
+  margin-bottom: 0;
+  font-size: 16px; }
+
+.delete-modal .deleteIcon {
+  padding: 33px;
+  background: rgba(255, 72, 72, 0.25);
+  border-radius: 100px;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .delete-modal .deleteIcon:after {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    content: "";
+    display: block;
+    background: #FF4948;
+    filter: blur(100px); }
+  .delete-modal .deleteIcon img {
+    width: 33px; }
+
+.delete-modal .default-text {
+  font-size: 20px;
+  max-width: 275px;
+  text-align: center; }
+
+.date-picker {
+  padding-top: 30px;
+  padding-bottom: 44px; }
+  .date-picker .title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF; }
+  .date-picker .date-picker-body {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center; }
+  .date-picker .days {
+    width: 50px;
+    margin-right: 20px; }
+  .date-picker .day[data-current="true"] {
+    color: white;
+    background: #0052FF; }
+  .date-picker .month[data-current="true"] {
+    color: white;
+    background: #0052FF; }
+  .date-picker .day, .date-picker .month {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #313150;
+    width: 50px;
+    height: 45px;
+    background: #0F122B;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 8px;
+    margin-bottom: 15px; }
+    .date-picker .day .active:last-of-type, .date-picker .month .active:last-of-type {
+      margin-bottom: 0; }
+  .date-picker .month {
+    width: 186px; }
+
+.time-picker {
+  padding-top: 30px;
+  padding-bottom: 44px; }
+  .time-picker .title {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF; }
+  .time-picker .time-picker-body {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center; }
+  .time-picker img[alt="dots"] {
+    width: 6px;
+    margin-right: 20px;
+    margin-left: 20px; }
+  .time-picker .hours, .time-picker .minutes {
+    width: 50px;
+    margin-bottom: -15px; }
+  .time-picker .hour[data-current="true"] {
+    color: white;
+    background: #0052FF; }
+  .time-picker .minute[data-current="true"] {
+    color: white;
+    background: #0052FF; }
+  .time-picker .hour, .time-picker .minute {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #313150;
+    width: 50px;
+    height: 45px;
+    background: #0F122B;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 8px;
+    margin-bottom: 15px; }
+    .time-picker .hour .active:last-of-type, .time-picker .minute .active:last-of-type {
+      margin-bottom: 0; }
+
+.register-modal {
+  padding: 40px 23px 27px; }
+  .register-modal .default-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 0; }
+  .register-modal .copy-clickable {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 40px; }
+  .register-modal .notice {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    opacity: 0.4; }
+  .register-modal .default-button {
+    padding-top: 16px;
+    padding-bottom: 16px; }
+  .register-modal-body {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    border-top: 1px solid #15172D;
+    border-bottom: 1px solid #15172D; }
+    .register-modal-body .login-field, .register-modal-body .password-field {
+      font-family: SF Pro Display;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column; }
+      .register-modal-body .login-field span, .register-modal-body .password-field span {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        opacity: 0.4; }
+    .register-modal-body .login-field {
+      margin-right: 102px; }
+
+/*# sourceMappingURL=maps/app.css.map */
