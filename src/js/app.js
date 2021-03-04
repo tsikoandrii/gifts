@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const registerModalButton = document.querySelector('#registerModalButton');
 
   if (registerModalButton) {
-    openHandler(registerModalButton, registerModal, () => {
-      console.log('skksks')
-    });
+    openHandler(registerModalButton, registerModal, registerClickFunc);
   }
 
   // Add New Card

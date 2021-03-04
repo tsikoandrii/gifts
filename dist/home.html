@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Главная страница</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preload" href="/css/libs.min.css" as="style">
+<link rel="preload" href="/css/app.css" as="style">
+<link rel="stylesheet" href="/css/libs.min.css">
+<link rel="stylesheet" href="/css/app.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="homepage-header">
+      <div class="container">
+            <div class="logotype">
+                Mygifts
+            </div>
+            <a href="/login.html" class="default-button header-login-button">войти</a>
+      </div>
+  </div>
+  <img src="img/hp-image.png" class="homepage-image">
+  <div class="homepage">
+      <div class="container">
+          <div class="default-h1">
+              Mygifts - будь в курсе всех актуальных розыгрышей рунета
+          </div>
+          <div class="last-contests">
+              <span class="last-contests-title">Розыгрыши о которых знали наши пользователи</span>
+
+              <div class="swiper-container last-contests-group">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/01.png" class="user-avatar">
+                          <div class="last-contest-budget">100 000 ₽</div>
+                          <div class="user-nick">@sherra.a</div>
+                      </div>
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/02.png" class="user-avatar">
+                          <div class="last-contest-budget">500 000 ₽</div>
+                          <div class="user-nick">@almazstrong</div>
+                      </div>
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/03.png" class="user-avatar">
+                          <div class="last-contest-budget">100 000 ₽</div>
+                          <div class="user-nick">@akula.57</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/04.jpg" class="user-avatar">
+                          <div class="last-contest-budget">150 000 ₽</div>
+                          <div class="user-nick">@max_vashchenko</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/05.jpg" class="user-avatar">
+                          <div class="last-contest-budget">150 000 ₽</div>
+                          <div class="user-nick">@muragi</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/06.jpg" class="user-avatar">
+                          <div class="last-contest-budget">100 000 ₽</div>
+                          <div class="user-nick">@ms.mexika</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/07.jpg" class="user-avatar">
+                          <div class="last-contest-budget">100 000 ₽</div>
+                          <div class="user-nick">@nik_traher</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/08.jpg" class="user-avatar">
+                          <div class="last-contest-budget">200 000 ₽</div>
+                          <div class="user-nick">@tufa777</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/09.jpg" class="user-avatar">
+                          <div class="last-contest-budget">50 000 ₽</div>
+                          <div class="user-nick">@rusikdid</div>
+                      </div>
+
+                      <div class="last-contest swiper-slide">
+                          <img src="img/users/10.jpg" class="user-avatar">
+                          <div class="last-contest-budget">50 000 ₽</div>
+                          <div class="user-nick">@alcha.l</div>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="">
+              </div>
+              <a href="#" class="default-button all-contests-link">Зарегистрироваться</a>
+          </div>
+          <span class="h-title">Возможность всегда быть в курсе топовых розыгрышей</span>
+          <p class="h-text">
+              Ежедневно блогеры и различные медиа площадки устраивают розыгрыши для своих подписчиков/клиентов или людей, которые наблюдают за их деятельностью. У каждого есть огромное желание стать победителем и выиграть что-либо в этих розыгрышах, но большенство желающих выиграть даже не знают, что сейчас тот или иной розыгрыш проходит. Поэтому мы и создали платформу, которая собирает информацию о практически всех розыгрышах рунета и дает возможность каждому желающему быть в курсе этого.
+          </p>
+          <span class="h-title">
+              Не быть подписанным на сотни блогеров/медиа-личностей
+          </span>
+          <p class="h-text">
+              Большинство людей подписывается на сотни, а то и тысячи блогеров / меди-личностей, чтобы следить за ними и в случае анонса какого-то розыгрыша быть в курсе и участвовать в нем, но это крайне не удобно, потому что тогда контент людей, которые по-настоящему интересен, просто теряется и у человека пропадает удовольствие от пользования социальной сетью. С помощью нашей платформы ему не нужно быть на всех подписанным, а нужно просто следить за обновлением информации в его личном кабинете, где он видит кто и когда проводит розыгрыш.
+          </p>
+          <span class="h-title">
+              Участвовать в розыгрышах с меньшей конкуренцией
+          </span>
+          <p class="h-text">
+              Частой проблемой является то, что человек желающий выиграть что-то, участвуют только в розыгрышах топовых блогеров/меди-личностей. Собственно проблема в том, что в этих розыгрышах участвуют еще тысячи людей и шансы стать победителем крайне малы. С помощью нашей платформы Вы сможете узнавать так же о розыгрышах блогеров/медиа-личностей, с небольшим количеством аудитории, в которых шансы стать победителем больше из-за того что участников в данном конкурсе меньше.
+          </p>
+          <span class="h-title">
+              Система проверенная временем
+          </span>
+          <p class="h-text">
+              Наш сервис разработан и поддерживается топовыми IT-специалистами, поэтому мы предоставляем стабильный и совершенный сервис, который не будет лагать и зависать, а будет выполнять свою задачу по предоставлению информации об актуальных розыгрышах пользователю на 100%.
+          </p>
+      </div>
+  </div>
+  <div class="homepage-footer">
+      <div class="container">
+          <div class="logotype">
+              Mygifts
+          </div>
+          <div class="footer-contacts">
+              <div class="contact">
+                  <img src="img/icons/email.svg" alt="email">
+                  <a href="mailto:help@mygifts.site"><span>help@mygifts.site</span></a>
+              </div>
+              <div class="contact">
+                  <img src="img/icons/target.svg" alt="target">
+                  <span>
+                      Россия, г. Москва, пер.Большой Cимоновский дом 2 этаж 1
+                  </span>
+              </div>
+          </div>
+          <div class="footer-payments">
+              <span>Мы принимаем</span>
+              <div>
+                  <img src="img/payment-systems/visa.svg" alt="visa">
+                  <img src="img/payment-systems/mastercard.svg" alt="mastercard">
+              </div>
+          </div>
+          <div class="footer-links">
+              <a href="/terms.html" class="footer-link decor-link">Условия использования</a>
+              <a href="/privacy.html" class="footer-link decor-link">Политика конфиденциальности</a>
+              <a href="/oferta.html" class="footer-link decor-link">Публичная оферта</a>
+          </div>
+
+          <div class="copyright">
+              © 2021. ООО «Бриз»
+          </div>
+      </div>
+  </div>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      slidesPerGroup: 1,
+      // Optional parameters
+      loop: true,
+    });
+  </script>
+  
+<div class="backdrop hidden" id="backdrop"></div>
+
+<div class="default-modal subscribe-modal" data-component="modal" id="subscribeModal">
+    <div class="profile-avatar">
+        <div class="ava">
+            <img class="avatar" src="img/avatars/vasilisa.png" alt="vasilisa">
+        </div>
+    </div>
+    <p class="default-text">
+        Для участия необходимо подписаться на этого пользователя
+    </p>
+    <div class="default-card">
+        <img class="like-icon" src="img/like.svg" alt="like">
+        <span class="modal-title">
+            Бесплатно
+        </span>
+        <p class="modal-desc">
+            Бесплатное участие на 2 дня.
+            Далее 499 рублей/месяц.
+        </p>
+    </div>
+    <div id="changeModal" class="default-button">
+        Подписаться
+    </div>
+    <div class="default-card other-content">
+        <img class="like-icon" src="img/like.svg" alt="like">
+        <span class="price">
+            499 руб
+        </span>
+    </div>
+    <div id="subClose" class="other-content-button default-button">
+        Подписаться
+    </div>
+    <p class="privacy-terms">
+        Нажав на кнопку, вы соглашаетесь с <a href="/terms.html">условиями использования сервиса</a> и <a href="/privacy.html">политикой конфиденциальности.</a>
+    </p>
+</div>
+<div class="default-modal delete-modal" data-component="modal" id="deleteCardModal">
+    <div class="deleteIcon">
+        <img src="img/delete-icon.svg" alt="deleteIcon">
+    </div>
+    <p class="default-text">
+        Вы уверены что хотите удалить эту карту?
+    </p>
+    <p class="modal-desc">
+        Отменить это будет невозможно
+    </p>
+    <div class="modal-buttons">
+        <button data-control="cancel" class="modal-button">
+            Отменить
+        </button>
+        <button class="modal-button red">
+            Да, удалить
+        </button>
+    </div>
+</div>
+
+<div class="default-modal date-picker" data-component="modal" id="datePicker">
+    <div class="title">Выберите число и месяц</div>
+    <form name="date" class="date-picker-body">
+        <input type="hidden" value="" name="day">
+        <input type="hidden" value="" name="month">
+        <div class="days">
+            <div data-datepicker="prev" data-type="day" class="day">29</div>
+            <div data-current="true" class="current day">30</div>
+            <div data-datepicker="next" data-type="day" class="day">31</div>
+        </div>
+        <div class="months">
+            <div data-datepicker="prev" data-type="month" class="month">Января</div>
+            <div data-current="true" data-month="2" class="month">Февраля</div>
+            <div data-datepicker="next" data-type="month" class="month">Марта</div>
+        </div>
+    </form>
+    <button data-type="submit" class="save default-button decor-button">
+        Сохранить дату
+    </button>
+</div>
+<div class="modal-layer">
+    <div class="default-modal delete-modal" data-component="modal" id="deleteContestModal">
+        <div class="deleteIcon">
+            <img src="img/delete-icon.svg" alt="deleteIcon">
+        </div>
+        <p class="default-text">
+            Вы уверены что хотите удалить этот розыгрыш?
+        </p>
+        <p class="modal-desc">
+            Отменить это будет невозможно
+        </p>
+        <div class="modal-buttons">
+            <button data-control="cancel" class="modal-button">
+                Отменить
+            </button>
+            <button data-control="delete" class="modal-button red">
+                Да, удалить
+            </button>
+        </div>
+    </div>
+</div>
+<div class="default-modal register-modal" data-component="modal" id="registerModal">
+    <p class="default-text">
+        Сохраните логин и пароль, чтобы не потерять доступ к аккаунту.
+    </p>
+
+    <div class="copy-clickable" data-component="copy-data" data-login="qesf24@gift.ru" data-password="7djsu23d">
+        <div class="register-modal-body">
+            <div class="login-field field">
+                <span>Логин</span>
+                <i id="registered_email">qesf24@gift.ru</i>
+            </div>
+            <div class="password-field field">
+                <span>Пароль</span>
+                <i id="registered_password">7djsu23d</i>
+            </div>
+        </div>
+        <div class="notice">Нажмите, чтобы скопировать.</div>
+    </div>
+
+    <a href="/login.html" class="default-button decor-button">
+        Продолжить
+    </a>
+</div>
+<div class="default-modal time-picker" data-component="modal" id="timePicker">
+    <div class="title">Выберите время</div>
+    <div class="time-picker-body">
+        <div class="hours">
+            <div data-timepicker="prev" data-type="hour" class="hour">16</div>
+            <div data-current="true" data-type="hour" class="hour">17</div>
+            <div data-timepicker="next" data-type="hour" class="hour">18</div>
+        </div>
+        <img src="img/2dot.svg" alt="dots">
+        <div class="minutes">
+            <div data-timepicker="prev" data-type="minute" class="minute">58</div>
+            <div data-current="true" data-type="minute" class="minute">59</div>
+            <div data-timepicker="next" data-type="minute" class="minute">00</div>
+        </div>
+    </div>
+    <button data-type="submit" class="save default-button decor-button">
+        Сохранить дату
+    </button>
+</div>
+
+
+
+<script>
+  let today = new Date();
+
+  const currentDate = {
+    day: 30,
+    month: 1,
+    year: today.getFullYear(),
+    hours: 0,
+    minutes: 59,
+  }
+</script>
+<script defer="" src="/js/libs.min.js"></script>
+<script defer="" src="/js/app.js"></script>
+
+</body>
+</html>
